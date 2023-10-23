@@ -1,4 +1,6 @@
 
+window.addEventListener("load", function() {
+
     const btn_del = document.getElementById('btn-del');
     const btn_menos= document.getElementById('btn--');
     const btn_mas = document.getElementById('btn-+');
@@ -9,7 +11,6 @@
     const btn_igual= document.getElementById('btn-equal');
     let ecuacion=''
     let actual=''
-    let anteultimo=''
     console.log(ecuacion.length)
     const escribir=(id)=>{
         if(id.innerHTML=='x'){
@@ -138,27 +139,6 @@ slider.addEventListener('input',()=>{
     }
 })
 
-let position=[0,1,2]
-/*
-    /*### Theme 2
-    --main-background-2: hsl(0, 0%, 90%);
-    --background-keypad-background-2: hsl(0, 5%, 81%);
-    --screen-background-2: hsl(0, 0%, 93%);
-
-    --key-background-2: hsl(25, 98%, 40%);
-    --key-shadow-2: hsl(25, 99%, 27%);
-
-    --txt-very-dark-blue: hsl(198, 20%, 13%);
-    /*### Theme 3
-    --main-background-3: hsl(268, 75%, 9%);
-    --screen-background-3: hsl(268, 71%, 12%);
-
-    --key-background-3: hsl(45, 7%, 89%);
-    --key-shadow-3: hsl(35, 11%, 61%);
-
-
-
-*/
 
 
 
@@ -168,6 +148,7 @@ let position=[0,1,2]
 
 
 
+});
 
 
 

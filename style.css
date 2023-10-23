@@ -210,6 +210,12 @@ main{
 .calculator-container{
     width: 375px;
 }
+/* @media (min-width: 678px){
+    .calculator-container{
+        width: 500px;
+    }
+    
+} */
 .calculator-keypad{
     background-color: var(--toggle-background-keypad-background);
     padding: 1rem;
