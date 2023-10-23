@@ -1,6 +1,6 @@
 
-window.addEventListener("load", function() {
 
+    
     const btn_del = document.getElementById('btn-del');
     const btn_menos= document.getElementById('btn--');
     const btn_mas = document.getElementById('btn-+');
@@ -12,53 +12,7 @@ window.addEventListener("load", function() {
     let ecuacion=''
     let actual=''
     console.log(ecuacion.length)
-    const escribir=(id)=>{
-        if(id.innerHTML=='x'){
-            ecuacion+='*'
-            input.innerHTML=ecuacion
-        }else{
 
-            ecuacion+=id.innerHTML
-            actual=ecuacion.charAt(ecuacion.length - 1)
-            
-            input.innerHTML=ecuacion
-        }
-    }
-    
-    const borrar=()=>{
-        if(ecuacion.length==0){
-            alert('no hay nada')
-        }else{
-            btn_del.style.cursor='pointer'
-            ecuacion=ecuacion.slice(0,ecuacion.length-1)
-            actual=ecuacion.charAt(ecuacion.length - 1)
-            input.innerHTML=ecuacion
-        }
-        console.log('borrar',ecuacion)
-    }
-
-const calculate=()=>{
-    if(actual=='+'||actual=='-'||actual=='x'||actual=='/'){
-        alert('no se puede operar porque termina en '+actual)
-    }else{
-        if(eval(ecuacion)==Infinity){
-            alert('no se puede dividir por 0')
-            ecuacion=''
-            input.innerHTML=''
-            actual=''
-        }else{
-            input.innerHTML=eval(ecuacion)
-            ecuacion=eval(ecuacion)
-        }
-    }
-    console.log(ecuacion,'sin borrar')
-}
-
-const reset=()=>{
-    ecuacion=''
-    actual=''
-    input.innerHTML=''
-}
 const slider=document.getElementById('slider')
 const bol=document.getElementById('bol')
 const body=document.getElementsByTagName('body')[0]
@@ -148,9 +102,52 @@ slider.addEventListener('input',()=>{
 
 
 
-});
 
+const escribir=(id)=>{
+    if(id.innerHTML=='x'){
+        ecuacion+='*'
+        input.innerHTML=ecuacion
+    }else{
+        ecuacion+=id.innerHTML
+        actual=ecuacion.charAt(ecuacion.length - 1)
+        
+        input.innerHTML=ecuacion
+    }
+}
 
+const borrar=()=>{
+    if(ecuacion.length==0){
+        alert('no hay nada')
+    }else{
+        btn_del.style.cursor='pointer'
+        ecuacion=ecuacion.slice(0,ecuacion.length-1)
+        actual=ecuacion.charAt(ecuacion.length - 1)
+        input.innerHTML=ecuacion
+    }
+
+}
+
+const calculate=()=>{
+if(actual=='+'||actual=='-'||actual=='x'||actual=='/'){
+    alert('no se puede operar porque termina en '+actual)
+}else{
+    if(eval(ecuacion)==Infinity){
+        alert('no se puede dividir por 0')
+        ecuacion=''
+        input.innerHTML=''
+        actual=''
+    }else{
+        input.innerHTML=eval(ecuacion)
+        ecuacion=eval(ecuacion)
+    }
+}
+}
+
+const reset=()=>{
+ecuacion=''
+actual=''
+input.innerHTML=''
+}
 
 
 
