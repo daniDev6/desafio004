@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <meta name="./images/favicon-32x32.png" itemprop="image">
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="class1">
+  <main>
+    <section class="calculator-container">
+      <header class="calculator-header">
+        <h3>Cal</h3>
+        <div class="theme">
+          <span>theme</span>
+          <div class="theme-toggle-container">
+        <div class="theme-toggle">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+        </div>
+        <div class="theme-toggle-bol">
+          <input id="slider" type="range" min="1" max="3" value="1">
+        </div>
+      </div>
+    </div>
+    </header>
+
+    <div class="calculator-main">
+      <div class="calculator-result">
+        <p id="input"></p>
+      </div>
+      <div class="calculator-keypad">
+
+
+      <div class="calculator-buttons">
+        <div class="btn" >
+          <span onclick="escribir(this)">7</span>
+        </div>
+        <div class="btn" >
+          <span onclick="escribir(this)">8</span>
+        </div>
+        <div class="btn" >
+          <span onclick="escribir(this)">9</span>
+        </div>
+        <div class="btn btn-blue">
+          <span onclick="borrar()" id="btn-del">DEL</span>
+        </div>
+        <div class="btn" >
+          <span onclick="escribir(this)">4</span>
+        </div>
+        <div class="btn" >
+          <span onclick="escribir(this)">5</span>
+        </div>
+        <div class="btn" >
+          <span onclick="escribir(this)">6</span>
+        </div>
+        <div class="btn" >
+          <span onclick="escribir(this)">+</span>
+        </div>
+        <div class="btn" >
+          <span onclick="escribir(this)">1</span>
+        </div>
+        <div class="btn" >
+          <span onclick="escribir(this)">2</span>
+        </div>
+        <div class="btn" >
+          <span onclick="escribir(this)">3</span>
+        </div>
+        <div class="btn" >
+          <span onclick="escribir(this)">-</span>
+        </div>
+        <div class="btn" >
+          <span onclick="escribir(this)">.</span>
+        </div>
+        <div class="btn" >
+          <span onclick="escribir(this)">0</span>
+        </div>
+        <div class="btn" >
+          <span onclick="escribir(this)">/</span>
+        </div>
+        <div class="btn" >
+          <span onclick="escribir(this)">x</span>
+        </div>
+      </div>
+      <div class="calculator-equal">
+        <button onclick="reset()" class="btn-blue">RESET</button>
+        <button onclick="calculate()" class="btn-red" id="btn-equal">=</button>
+      </div>
+    </div>
+
+
+
+    </div>
+
+    
+
+    
+    
+    
+    
+  </section>
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/daniDev6">DaniDev6</a>.
+  </div>
+</main>
+<script src="./main.js"></script>
+</body>
+</html>

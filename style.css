@@ -1,0 +1,390 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Theme 1
+
+#### Backgrounds
+
+- Very dark desaturated blue (main background): hsl(222, 26%, 31%)
+- Very dark desaturated blue (toggle background, keypad background): hsl(223, 31%, 20%)
+- Very dark desaturated blue (screen background): hsl(224, 36%, 15%)
+
+#### Keys
+
+- Desaturated dark blue (key background): hsl(225, 21%, 49%)
+- Desaturated dark blue (key shadow): hsl(224, 28%, 35%)
+
+- Red (key background, toggle): hsl(6, 63%, 50%)
+- Dark red (key shadow): hsl(6, 70%, 34%)
+
+- Light grayish orange (key background): hsl(30, 25%, 89%)
+- Grayish orange (key shadow): hsl(28, 16%, 65%)
+
+#### Text
+
+- Very dark grayish blue: hsl(221, 14%, 31%)
+- White: hsl(0, 0%, 100%)
+
+### Theme 2
+
+#### Backgrounds
+
+- Light gray (main background): hsl(0, 0%, 90%)
+- Grayish red (toggle background, keypad background): hsl(0, 5%, 81%)
+- Very light gray (screen background): hsl(0, 0%, 93%)
+
+#### Keys
+
+- Dark moderate cyan (key background): hsl(185, 42%, 37%)
+- Very dark cyan (key shadow): hsl(185, 58%, 25%)
+
+- Orange (key background, toggle): hsl(25, 98%, 40%)
+- Dark orange (key shadow): hsl(25, 99%, 27%)
+
+- Light grayish yellow (key background): hsl(45, 7%, 89%)
+- Dark grayish orange (key shadow): hsl(35, 11%, 61%)
+
+#### Text
+
+- Very dark grayish yellow: hsl(60, 10%, 19%)
+- White (text): hsl(0, 0%, 100%)
+
+### Theme 3
+
+#### Backgrounds
+
+- Very dark violet (main background): hsl(268, 75%, 9%)
+- Very dark violet (toggle background, keypad background, screen background): hsl(268, 71%, 12%)
+
+#### Keys
+
+- Dark violet (key background): hsl(281, 89%, 26%)
+- Vivid magenta (key shadow): hsl(285, 91%, 52%)
+
+- Pure cyan (key background, toggle): hsl(176, 100%, 44%)
+- Soft cyan (key shadow): hsl(177, 92%, 70%)
+
+- Very dark violet (key background): hsl(268, 47%, 21%)
+- Dark magenta (key shadow): hsl(290, 70%, 36%)
+
+#### Text
+
+- Light yellow: hsl(52, 100%, 62%)
+- Very dark blue: hsl(198, 20%, 13%)
+- White (text): hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (numbers): 32px
+
+### Font
+
+- Family: [League Spartan](https://fonts.google.com/specimen/League+Spartan)
+- Weights: 700
+
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+:root{
+    /*### Theme 1*/
+        --main-background:hsl(222, 26%, 31%);
+        --toggle-background-keypad-background:hsl(223, 31%, 20%);
+        --screen-background:hsl(224, 36%, 15%);
+
+        --key-white-boton:rgba(255, 255, 255, 0.8);
+        --key-white-txt:hsl(268, 75%, 9%);
+        --key-white-hover:white;
+
+        --blue-key-background:hsl(225, 21%, 49%);
+        --blue-key-shadow:hsl(185, 58%, 25%);
+        
+        --red-key-background:hsl(6, 63%, 50%);
+        --red-key-shadow:hsl(6, 70%, 34%);
+
+        --orange-key-background:hsl(30, 25%, 89%);
+        --orange-key-shadow:hsl(28, 16%, 65%);
+
+        --blue-text:hsl(268, 75%, 9%);
+        --white-text:hsl(0, 0%, 100%);
+        --size-numbers: 32px;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+    text-decoration: none;
+}
+body{
+    background-color: var(--main-background);
+    color: var(--white-text);
+}
+
+#slider{
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 100%;
+    border-radius: 1rem;
+    background-color: var(--toggle-background-keypad-background);
+    
+}
+#slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--red-key-background);
+    cursor: pointer;
+}
+.theme-toggle-bol{
+    position: relative;
+
+}
+.theme-toggle-bol>span{
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+}
+.attribution{
+    position: absolute;
+    bottom: 1rem;
+}
+
+.calculator-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.theme{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+.theme-toggle{
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+}
+.theme-toggle-bol{
+    cursor: pointer;
+    width: 60px;
+    background-color: var(--toggle-background-keypad-background);
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    padding: .2rem;
+}
+.theme-toggle-bol>span{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+}
+.calculator-container{
+    width: 375px;
+}
+.calculator-keypad{
+    background-color: var(--toggle-background-keypad-background);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.calculator-main{
+    font-size: var(--size-numbers);
+}
+.calculator-result{
+    width: 100%;
+    background-color: var(--screen-background);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+.calculator-buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: .5rem;
+}
+.btn{
+    background-color:var(--key-white-boton);
+    color: var(--key-white-txt);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 1rem;
+    box-shadow: 0px 3px 1px var(--blue-key-background);
+}
+.btn>span{
+    font-size: var(--size-numbers);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.btn:hover{
+    background-color: var(--key-white-hover);
+}
+.btn.btn-blue, .btn-blue{
+    background-color: var(--blue-key-background);
+    color: white;
+    position: relative;
+}
+.btn-blue:hover::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    pointer-events: none;
+}
+.btn-red{
+    background-color: var(--red-key-background);
+    position: relative;
+}
+.btn-red:hover::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+}
+
+.calculator-equal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    margin: .5rem 0;    
+}
+.calculator-equal>button{
+    width: 100%;
+    border: none;
+    padding: .5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin: .5rem;
+    font-size: var(--size-numbers);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    box-shadow: 0px 5px 1px rgba(0,0,0,.5);
+
+}
+
+
+#input {
+    height: var(--size-numbers);
+    display: flex;
+    align-items: center;
+    
+}
+
+.attribution{
+    color: var(--white-text);
+    font-size: 1rem;
+}
+.attribution a{
+    color:var(--red-key-background);
+}
+.attribution a:hover{
+    color: var(--blue-key-background);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
